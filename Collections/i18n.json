@@ -13,7 +13,7 @@
 					"script": {
 						"id": "893fd013-b970-4bca-bc04-ac00a015e39a",
 						"exec": [
-							"pm.test(\"Test OK\",function(){\r",
+							"pm.test(\"OK\",function(){\r",
 							"    pm.response.to.have.status(200);\r",
 							"}\r",
 							")"
