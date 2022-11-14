@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "7cc6d350-13aa-447a-aae9-0de24b8933b7",
+		"name": "First_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "postmanGET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "893fd013-b970-4bca-bc04-ac00a015e39a",
+						"exec": [
+							"pm.test(\"Test OK\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"}\r",
+							")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "7f37771f-c291-4110-a91f-28f127d51c17",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "postman-echo.com/get",
+				"description": "request get postman"
+			},
+			"response": []
+		},
+		{
+			"name": "I18N",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0c41e5c1-56f8-4c0c-a99d-42ec94fbff66",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "06271fc7-99d5-44e2-a5a6-7a0e904d272e",
+						"exec": [
+							"pm.test(\"OK\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"}\r",
+							")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "67576f96-a752-4b7c-8136-2f2289696079",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic {{authCreds}}",
+						"type": "text"
+					}
+				],
+				"url": "{{URL}}/o/i18n/config/user/fr_FR"
+			},
+			"response": []
+		}
+	]
+}
