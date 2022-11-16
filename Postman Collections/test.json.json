@@ -7,24 +7,63 @@
 	"item": [
 		{
 			"name": "New Request",
-			"_postman_id": "9f4653bc-fbc2-41e7-96cc-e276e612258a",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bb06988c-9d81-4dbb-980a-3bb381711a56",
+						"exec": [
+							"\r",
+							"console.log(pm.environment.get(\"BASE_URL\"))"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e47fede1-5e1e-4449-9039-cdfeca4f8329",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "9f4653bc-fbc2-41e7-96cc-e276e612258a",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "X-TenantID",
+						"value": "{{X-TenantID}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"login\": \"13549\",\r\n  \"password\": \"Admin01_\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{AUTH_URL}}"
 			},
 			"response": []
 		}
 	],
 	"variable": [
 		{
-			"id": "8e407246-3b39-46da-9da5-1c578a4b629b",
+			"id": "715b75a8-d15b-40df-91bc-7f3d7a4a6713",
 			"key": "variable_key",
-			"value": "",
-			"type": "string"
+			"value": ""
 		}
 	]
 }
