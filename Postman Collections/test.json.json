@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "New Request",
+			"name": "GET - test",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -61,7 +61,7 @@
 	],
 	"variable": [
 		{
-			"id": "715b75a8-d15b-40df-91bc-7f3d7a4a6713",
+			"id": "9d6ba87a-edd5-4502-b7a1-2c26a9c88f85",
 			"key": "variable_key",
 			"value": ""
 		}
