@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "e5ca2bad-88f1-48da-8f37-21f6c492ba13",
+		"name": "OneTeam_formation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"_postman_id": "9f4653bc-fbc2-41e7-96cc-e276e612258a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "8e407246-3b39-46da-9da5-1c578a4b629b",
+			"key": "variable_key",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
